@@ -1,6 +1,10 @@
 services:
-  ratings:
-    build: .
-    image: ghcr.io/5hoei/static-web:dev
+  web:
+    image: nginx
+    volumes:
+      - /usr/share/nginx/html/src
     ports:
-      - "8080:8080"
+      - "8080:80"
+    environment:
+      - NGINX_HOST=foobar.com
+      - NGINX_PORT=80
