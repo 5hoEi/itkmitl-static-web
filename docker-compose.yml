@@ -1,0 +1,6 @@
+services:
+  ratings:
+    build: .
+    image: ghcr.io/5hoei/static-web:dev
+    ports:
+      - "8080:8080"
